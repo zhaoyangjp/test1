@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷游戏</title>
+    <link rel="stylesheet" href="minesweeper.css">
+</head>
+<body>
+    <div class="container">
+        <h1>扫雷游戏</h1>
+        <div class="game-info">
+            <div class="info-item">
+                <span>地雷数量: <span id="mine-count">10</span></span>
+            </div>
+            <div class="info-item">
+                <span>时间: <span id="timer">0</span>s</span>
+            </div>
+            <div class="info-item">
+                <button id="restart-btn">重新开始</button>
+            </div>
+        </div>
+        <div class="game-board" id="game-board"></div>
+        <div class="game-result" id="game-result" style="display: none;">
+            <div class="result-content">
+                <div class="result-text" id="result-text"></div>
+                <button onclick="game.restart()">再来一局</button>
+            </div>
+        </div>
+        <div class="game-instructions">
+            <p>左键点击开启格子，右键标记/取消标记地雷</p>
+        </div>
+    </div>
+    <script src="minesweeper.js"></script>
+</body>
+</html>
